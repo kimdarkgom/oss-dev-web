@@ -1,40 +1,53 @@
+
+
 import streamlit as st
 import numpy as np
 import pandas as pd
 import altair as alt
+import matplotlib.pyplot as plt
 
+
+#ex-2
+rand = np.random.normal(1,2,size =20)
+fig, ax = plt.subplots()
+ax.hist(rand, bins = 15)
+st.pyplot(fig)
+
+
+#ex-1
 # Page title
-st.set_page_config(page_title='Interactive Data Explorer', page_icon='📊')
-st.title('📊 Interactive Data Explorer')
+# st.set_page_config(page_title='Interactive Data Explorer', page_icon='📊')
+# st.title('📊 Interactive Data Explorer')
 
-st.sidebar.title('sidebar title')
+# st.sidebar.title('sidebar title')
 
-st.title("this is he app title")
-st.header("this is he app header")
-st.markdown("this is he app markdown")
-st.subheader("this is he app subheader")
-st.caption("this is he app caption")
-st.code("x=2021")
-st.latex(r'''a+a r^1+a r^2+a r^3''')
+# st.title("this is he app title")
+# st.header("this is he app header")
+# st.markdown("this is he app markdown")
+# st.subheader("this is he app subheader")
+# st.caption("this is he app caption")
+# st.code("x=2021")
+# st.latex(r'''a+a r^1+a r^2+a r^3''')
 
-st.image('https://www.google.com/url?sa=i&url=https%3A%2F%2Fv.daum.net%2Fv%2F5b4bfe6fed94d2000182d4e3&psig=AOvVaw0BnVVrED_6c6dO-SQQDCK1&ust=1711591313653000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDG4NOsk4UDFQAAAAAdAAAAABAE')
+# st.image('https://www.google.com/url?sa=i&url=https%3A%2F%2Fv.daum.net%2Fv%2F5b4bfe6fed94d2000182d4e3&psig=AOvVaw0BnVVrED_6c6dO-SQQDCK1&ust=1711591313653000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDG4NOsk4UDFQAAAAAdAAAAABAE')
 
-st.checkbox('yes')
-st.button('Click')
-gender = st.radio('pick your gender',['Male','Female'])
-st.selectbox('Pick your gender',['Male','Female'])
-plant = st.multiselect('choose a planet',['jupiter','mars','neptune'])
-st.select_slider('Pick a mark',['Bad','Good','Excellent'])
-st.slider('Pick a number', 0,50)
+# st.checkbox('yes')
+# st.button('Click')
+# gender = st.radio('pick your gender',['Male','Female'])
+# st.selectbox('Pick your gender',['Male','Female'])
+# plant = st.multiselect('choose a planet',['jupiter','mars','neptune'])
+# st.select_slider('Pick a mark',['Bad','Good','Excellent'])
+# st.slider('Pick a number', 0,50)
 
-st.number_input('Pick a number',0,10)
-st.text_input('Email address')
-st.date_input('travelling data')
-st.time_input('school time')
-st.text_area('description')
-st.file_uploader('Upload a photo')
-st.color_picker('choose your favorite color')
+# st.number_input('Pick a number',0,10)
+# st.text_input('Email address')
+# st.date_input('travelling data')
+# st.time_input('school time')
+# st.text_area('description')
+# st.file_uploader('Upload a photo')
+# st.color_picker('choose your favorite color')
                                  
+
 # with st.expander('About this app'):
 #   st.markdown('**What can this app do?**')
 #   st.info('This app shows the use of Pandas for data wrangling, Altair for chart creation and editable dataframe for data interaction.')
