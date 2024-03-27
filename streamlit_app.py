@@ -6,7 +6,7 @@ import pandas as pd
 import altair as alt
 import matplotlib.pyplot as plt
 
-
+#?
 #ex-2
 rand = np.random.normal(1,2,size =20)
 fig, ax = plt.subplots()
